@@ -11,7 +11,7 @@ public class ProductTest {
         Product p = new Product(33, "spaghetti", 2.15);
         Logger.getGlobal().info("test product: " + p);
         Assertions.assertEquals("spaghetti: 2.15", p.toString());
-        System.out.printf("\n\nTesting module: %s\n",
-                            ProductTest.class.getModule().getName());
+        System.out.printf("\n\nExecuted on the module-path: %b\n",
+                            ProductTest.class.getModule().isNamed());
     }
 }

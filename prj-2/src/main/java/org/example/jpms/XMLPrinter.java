@@ -10,7 +10,7 @@ public class XMLPrinter {
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         jaxbMarshaller.marshal(product, System.out);
-        System.out.printf("\n\nRunning module: %s\n",
-                            XMLPrinter.class.getModule().getName());
+        System.out.printf("\n\nExecuted on the module-path: %b\n",
+                            XMLPrinter.class.getModule().isNamed());
     }
 }
